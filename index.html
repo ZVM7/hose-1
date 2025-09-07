@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YourBrand – Developer Studio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="main-header">
+    <div class="logo">
+      <a href="#home" aria-label="Brand Home">
+        <img src="images/LOGO.png" alt="Brand Logo">
+      </a>
+      <span class="logo-text">House <span style="text-transform: lowercase;">O</span>f Code</span>
+
+    </div>
+
+    <!-- Hamburger (mobile only) -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About Us</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#resources" class="nav-link">Portfolio</a></li>
+        <li><a href="#learn" class="nav-link">Resources</a></li>
+        <li><a href="#contact" class="nav-link">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== Hero Section ===== -->
+  <section class="hero" id="home">
+    <div class="hero-slider">
+      <div class="slides">
+        <!-- Slide 1 -->
+        <div class="slide">
+          <img src="images/Slide 1.png" alt="Service 1">
+          <div class="slide-content">
+            <h2>Build Fast. Build Secure. Build to Last.</h2>
+            <p>We integrate DevSecOps from day one — so your web & mobile apps launch stronger, safer, and ready to scale.</p>
+            <a href="#call" class="cta primary">Check Our Services</a>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+          <img src="images/slide 2.png" alt="Service 2">
+          <div class="slide-content">
+            <h2>No Code Factories. Just Craft & Care.</h2>
+            <p>100% in-house team, boutique approach, startup-friendly. See how we’ve helped brands launch secure, high-performing digital experiences.</p>
+            <a href="#call" class="cta primary">→ Book Free Strategy Call</a>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+          <img src="images/Slide 3.png" alt="Service 3">
+          <div class="slide-content">
+            <h2>Ready to Secure Your Next Launch?</h2>
+            <p>Book your free strategy call and discover how shift-left security saves time, money, and headaches down the road.</p>
+            <a href="#call" class="cta primary">→ Book Free Strategy Call</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Navigation dots -->
+      <div class="slider-dots">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
+      </div>
+    </div>
+
+
+    <div class="hero-image">
+      <img src="images/New LOGO.png" alt="Developer at work">
+      <div class="overlay-text">You Talk To Makers, Not Middleman</div>
+    </div> 
+  </section>
+
+  <!-- ===== Services ===== -->
+  <section class="services-section" id="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="service-card">
+          <h3>Secure Web App Development</h3>
+          <p>
+            Web Apps built secure from day one. We design high-performing applications with DevSecOps 
+            integrated into every sprint — launching faster, safer, and future-proof.
+          </p>
+          <a href="#contact" class="btn-primary">Contact Us</a>
+      </div>
+      <div class="service-card">
+        <h3>Secure Mobile App Development</h3>
+        <p> “Mobile Apps That Scale Safely From MVPs to enterprise-grade apps, we embed security into the mobile development lifecycle. You get user-friendly apps that protect your brand, your data, and your bottom line.</p>
+        <a href="#contact" class="btn-primary">Contact Us</a>
+
+      </div>
+
+      <div class="service-card">
+        <h3> DevSecOps & Shift-Left Integration</h3>
+        <p> Security Isn’t an Afterthought — It’s Our Foundation Most teams bolt on security at the end. We bring it in at the start. Shift-left principles mean fewer vulnerabilities, faster launches, and long-term cost savings. Security becomes your competitive advantage.</p>
+        <a href="#contact" class="btn-primary">Contact Us</a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= About Us Section ================= -->
+<section id="about" class="about-section">
+  <div class="container">
+    <h2>About Us</h2>
+    <p class="intro">
+      We’re a boutique team of developers passionate about building secure, scalable, and high-performing applications.  
+      From startups to established businesses, we embed security and quality into every line of code.
+    </p>
+
+    <div class="about-grid">
+      <!-- Company Info -->
+      <div class="about-card">
+        <h3>Our Company</h3>
+        <p>
+          With years of experience in full-stack development and DevSecOps, our mission is to help brands
+          launch faster and safer without compromising on quality.  
+          We don’t cut corners—we build for the long run.
+        </p>
+      </div>
+
+      <!-- Individual Info -->
+      <div class="about-card">
+        <h3>About Me</h3>
+        <p>
+          Hi, I’m [Your Name], a full-stack developer specializing in the MERN stack, cloud deployment,
+          and modern security practices. I work closely with clients to turn their vision into digital reality.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Portfolio Section ================= -->
+<section id="portfolio" class="portfolio-section">
+  <div class="container">
+    <h2>Portfolio</h2>
+    <p class="intro">A selection of projects we’ve proudly delivered for clients.</p>
+
+    <div class="portfolio-slider">
+      <div class="slider-track">
+        <!-- 6 unique projects -->
+        <div class="portfolio-item"><img src="images/project 1.png" alt="Project 1"></div>
+        <div class="portfolio-item"><img src="images/project 2.png" alt="Project 2"></div>
+        <div class="portfolio-item"><img src="images/project 3.png" alt="Project 3"></div>
+        <div class="portfolio-item"><img src="images/project 4.png" alt="Project 4"></div>
+        <div class="portfolio-item"><img src="images/project 5.png" alt="Project 5"></div>
+        <div class="portfolio-item"><img src="images/project 6.png" alt="Project 6"></div>
+
+        <!-- Duplicate the same 6 projects for seamless scroll -->
+        <div class="portfolio-item"><img src="images//project 1.png" alt="Project 1"></div>
+        <div class="portfolio-item"><img src="images/project 2.png" alt="Project 2"></div>
+        <div class="portfolio-item"><img src="images/project 3.png" alt="Project 3"></div>
+        <div class="portfolio-item"><img src="images/project 4.png" alt="Project 4"></div>
+        <div class="portfolio-item"><img src="images/project 5.png" alt="Project 5"></div>
+        <div class="portfolio-item"><img src="images/project 6.png" alt="Project 6"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="invest-early" class="invest-section hidden">
+  <div class="container">
+    <h2>💡 Invest Early. Save Big Later.</h2>
+    <p class="intro">
+      Most teams treat security like duct tape — something added at the end. But vulnerabilities caught late can cost 10x more to fix than those found early. 
+      Our shift-left approach integrates DevSecOps into every step of development, reducing risk, accelerating launch, and protecting your brand’s reputation.
+    </p>
+    <div class="stages">
+    <div class="stage"><span class="label">Design</span> <span class="value" data-target="100">$0</span></div>
+    <div class="stage"><span class="label">Development</span> <span class="value" data-target="1000">$0</span></div>
+    <div class="stage"><span class="label">Testing</span> <span class="value" data-target="5000">$0</span></div>
+    <div class="stage"><span class="label">Post-Launch</span> <span class="value" data-target="10000">$0</span></div>
+  </div>
+  
+     <p class="highlight">
+      ➝ Shift-Left Security = Find Bugs Early → Save Money, Launch Faster
+    </p> 
+  </div>
+</section>
+
+<style>
+.cost-counter {
+  text-align: center;
+}
+.stages {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+.stage {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #e63946;
+}
+.stage .label {
+  display: block;
+  font-size: 1.5rem;   /* increase stage name size */
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.stage .value {
+  font-size: 2.4rem;   /* increase dollar amount size */
+  font-weight: 800;
+  color: #e63946;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".value");
+  counters.forEach(counter => {
+    let target = +counter.getAttribute("data-target");
+    let current = 0;
+    let step = target / 900; // speed
+
+    let update = () => {
+      current += step;
+      if (current < target) {
+        counter.textContent = "$" + Math.floor(current);
+        requestAnimationFrame(update);
+      } else {
+        counter.textContent = "$" + target.toLocaleString();
+      }
+    };
+    update();
+  });
+});
+</script>
+
+
+
+
+
+
+
+  <!-- ===== Contact ===== -->
+ <section class="contact-section" id="contact">
+  <h2>Contact Us</h2>
+  <form class="contact-form">
+    
+    <!-- Name -->
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <!-- Email -->
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+
+    <!-- Service selection -->
+    <label for="service">Service</label>
+    <select id="service" name="service" required>
+      <option value="">-- Please choose an option --</option>
+      <option value="web-app">Web Application</option>
+      <option value="mobile-app">Mobile Application</option>
+      <option value="web-section">Section of a Web App</option>
+      <option value="mobile-section">Section of a Mobile App</option>
+    </select>
+
+    <!-- Project description -->
+    <label for="message">Describe Your Project</label>
+    <textarea id="message" name="message" rows="5" placeholder="Tell us about the project you're looking for..." required></textarea>
+
+    <!-- Submit -->
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <p>&copy; 2025 YourBrand. All rights reserved.</p>
+  </footer>
+
+  <!-- ===== Sticky CTA ===== -->
+  <a href="#contact" class="sticky-cta">Get Started</a>
+
+  <!-- ===== Exit Popup ===== -->
+  <div class="exit-popup" id="exitPopup">
+    <div class="popup-content">
+      <button class="close-popup" id="closePopup">&times;</button>
+      <h2>Avoid Common Coding Mistakes</h2>
+      <p>Discover why shift-left principles matter and how to reduce costly errors in development.</p>
+      <form class="popup-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <button type="submit">Get the Guide</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== Scripts ===== -->
+  <script src="script.js">
+    // Mobile nav toggle
+    const hamburger = document.getElementById('hamburger');
+    const mainNav = document.getElementById('mainNav');
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('open');
+      hamburger.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', isOpen);
+      document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    // Close nav when link clicked
+    document.querySelectorAll('.main-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (mainNav.classList.contains('open')) {
+          mainNav.classList.remove('open');
+          hamburger.classList.remove('active');
+          hamburger.setAttribute('aria-expanded', false);
+          document.body.classList.remove('menu-open');
+        }
+      });
+    });
+
+    // Shrinking header
+    const header = document.querySelector('.main-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('shrink');
+      } else {
+        header.classList.remove('shrink');
+      }
+    });
+
+    // Exit intent popup
+    const exitPopup = document.getElementById('exitPopup');
+    const closePopup = document.getElementById('closePopup');
+    let popupShown = false;
+
+    document.addEventListener('mouseleave', (e) => {
+      if (e.clientY < 10 && !popupShown) {
+        exitPopup.classList.add('show');
+        popupShown = true;
+      }
+    });
+
+    closePopup.addEventListener('click', () => {
+      exitPopup.classList.remove('show');
+    });
+  </script>
+
+</body>
+</html>
+
