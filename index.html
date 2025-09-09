@@ -1,368 +1,429 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YourBrand – Developer Studio</title>
+  <title>Boutique Web & Mobile Development Studio</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    h1, h2, h3 {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- ===== Header ===== -->
-  <header class="main-header">
-    <div class="logo">
-      <a href="#home" aria-label="Brand Home">
-        <img src="images/LOGO.png" alt="Brand Logo">
-      </a>
-      <span class="logo-text">House <span style="text-transform: lowercase;">O</span>f Code</span>
 
-    </div>
 
-    <!-- Hamburger (mobile only) -->
-    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <nav class="main-nav" id="mainNav" aria-label="Primary">
-      <ul class="nav-links">
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#about" class="nav-link">About Us</a></li>
-        <li><a href="#services" class="nav-link">Services</a></li>
-        <li><a href="#resources" class="nav-link">Portfolio</a></li>
-        <li><a href="#learn" class="nav-link">Resources</a></li>
-        <li><a href="#contact" class="nav-link">Contact Us</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- ===== Hero Section ===== -->
-  <section class="hero" id="home">
-    <div class="hero-slider">
-      <div class="slides">
-        <!-- Slide 1 -->
-        <div class="slide">
-          <img src="images/Slide 1.png" alt="Service 1">
-          <div class="slide-content">
-            <h2>Build Fast. Build Secure. Build to Last.</h2>
-            <p>We integrate DevSecOps from day one — so your web & mobile apps launch stronger, safer, and ready to scale.</p>
-            <a href="#call" class="cta primary">Check Our Services</a>
-          </div>
+    <header class="header">
+      <div class="container">
+        <!-- Logo + Company Name -->
+        <div class="logo">
+          <img src="images/LOGO.png" alt="Company Logo">
+          <span class="company-name">House of Code</span>
         </div>
 
-        <!-- Slide 2 -->
-        <div class="slide">
-          <img src="images/slide 2.png" alt="Service 2">
-          <div class="slide-content">
-            <h2>No Code Factories. Just Craft & Care.</h2>
-            <p>100% in-house team, boutique approach, startup-friendly. See how we’ve helped brands launch secure, high-performing digital experiences.</p>
-            <a href="#call" class="cta primary">→ Book Free Strategy Call</a>
+        <!-- Navbar -->
+        <nav class="navbar">
+          <a href="#">Home</a>
+          <a href="#">Services</a>
+          <a href="#">About</a>
+        </nav>
+
+        <!-- CTA Button -->
+        <a href="#" class="header-btn">Get Started</a>
+      </div>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero">
+        <video autoplay muted loop playsinline>
+          <source src="videos/bacground hero.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div>
+        <div class="hero-content">
+          <h1>Welcome to My Website</h1>
+          <p>Modern, clean and engaging hero section with video background.</p>
+
+          <div class="hero-form">
+            <input type="email" placeholder="Enter your email">
+            <button class="btn">Get Started</button>
           </div>
         </div>
+    </section>
 
-        <!-- Slide 3 -->
-        <div class="slide">
-          <img src="images/Slide 3.png" alt="Service 3">
-          <div class="slide-content">
-            <h2>Ready to Secure Your Next Launch?</h2>
-            <p>Book your free strategy call and discover how shift-left security saves time, money, and headaches down the road.</p>
-            <a href="#call" class="cta primary">→ Book Free Strategy Call</a>
-          </div>
-        </div>
-      </div>
+<section class="services" id="services">
+  <!-- Falling Elements -->
+  <div class="falling-element circle" style="left:10%; animation-duration:10s;"></div>
+  <div class="falling-element circle" style="left:70%; animation-duration:12s;"></div>
+  <div class="falling-element code" style="left:40%; animation-duration:9s;">{ }</div>
+  <div class="falling-element code" style="left:55%; animation-duration:11s;">&lt;/&gt;</div>
+  <div class="falling-element number" style="left:25%; animation-duration:13s;">1</div>
+  <div class="falling-element number" style="left:80%; animation-duration:14s;">7</div>
+  <div class="falling-element circle" style="left:35%; animation-duration:15s;"></div>
 
-
-      <!-- Navigation dots -->
-      <div class="slider-dots">
-        <span class="dot active" data-slide="0"></span>
-        <span class="dot" data-slide="1"></span>
-        <span class="dot" data-slide="2"></span>
-      </div>
-    </div>
-
-
-    <div class="hero-image">
-      <img src="images/New LOGO.png" alt="Developer at work">
-      <div class="overlay-text">You Talk To Makers, Not Middleman</div>
-    </div> 
-  </section>
-
-  <!-- ===== Services ===== -->
-  <section class="services-section" id="services">
-    <h2>Our Services</h2>
-    <div class="service-grid">
-      <div class="service-card">
-          <h3>Secure Web App Development</h3>
-          <p>
-            Web Apps built secure from day one. We design high-performing applications with DevSecOps 
-            integrated into every sprint — launching faster, safer, and future-proof.
-          </p>
-          <a href="#contact" class="btn-primary">Contact Us</a>
-      </div>
-      <div class="service-card">
-        <h3>Secure Mobile App Development</h3>
-        <p> “Mobile Apps That Scale Safely From MVPs to enterprise-grade apps, we embed security into the mobile development lifecycle. You get user-friendly apps that protect your brand, your data, and your bottom line.</p>
-        <a href="#contact" class="btn-primary">Contact Us</a>
-
-      </div>
-
-      <div class="service-card">
-        <h3> DevSecOps & Shift-Left Integration</h3>
-        <p> Security Isn’t an Afterthought — It’s Our Foundation Most teams bolt on security at the end. We bring it in at the start. Shift-left principles mean fewer vulnerabilities, faster launches, and long-term cost savings. Security becomes your competitive advantage.</p>
-        <a href="#contact" class="btn-primary">Contact Us</a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= About Us Section ================= -->
-<section id="about" class="about-section">
   <div class="container">
-    <h2>About Us</h2>
-    <p class="intro">
-      We’re a boutique team of developers passionate about building secure, scalable, and high-performing applications.  
-      From startups to established businesses, we embed security and quality into every line of code.
-    </p>
 
-    <div class="about-grid">
-      <!-- Company Info -->
-      <div class="about-card">
-        <h3>Our Company</h3>
-        <p>
-          With years of experience in full-stack development and DevSecOps, our mission is to help brands
-          launch faster and safer without compromising on quality.  
-          We don’t cut corners—we build for the long run.
-        </p>
+    <!-- Header & Intro -->
+    <div class="services-header">
+      <h2>Our Services</h2>
+      <p>We provide top-notch solutions to help your business grow. Explore our expertise below.</p>
+    </div>
+
+    <!-- Service Cards -->
+    <div class="service-cards">
+      <div class="card">
+        <div class="card-icon">
+          <img src="images/Web Devel.png" alt="Web App Development Icon">
+        </div>
+        <h3>Web App Development</h3>
+        <p>Building scalable and responsive web applications tailored to your business needs.</p>
+        <button class="card-btn">Book a Call</button>
       </div>
 
-      <!-- Individual Info -->
-      <div class="about-card">
-        <h3>About Me</h3>
-        <p>
-          Hi, I’m [Your Name], a full-stack developer specializing in the MERN stack, cloud deployment,
-          and modern security practices. I work closely with clients to turn their vision into digital reality.
-        </p>
+      <div class="card">
+        <div class="card-icon">
+          <img src="icons/mobile-development.png" alt="Mobile App Development Icon">
+        </div>
+        <h3>Mobile App Development</h3>
+        <p>Designing and developing engaging mobile applications for iOS and Android platforms.</p>
+        <button class="card-btn">Book a Call</button>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">
+          <img src="images/devops.png" alt="DevOps Services Icon">
+        </div>
+        <h3>DevOps Services</h3>
+        <p>Implementing efficient CI/CD pipelines, cloud infrastructure, and automation solutions.</p>
+        <button class="card-btn">Book a Call</button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= Portfolio Section ================= -->
-<section id="portfolio" class="portfolio-section">
-  <div class="container">
-    <h2>Portfolio</h2>
-    <p class="intro">A selection of projects we’ve proudly delivered for clients.</p>
 
-    <div class="portfolio-slider">
-      <div class="slider-track">
-        <!-- 6 unique projects -->
-        <div class="portfolio-item"><img src="images/project 1.png" alt="Project 1"></div>
-        <div class="portfolio-item"><img src="images/project 2.png" alt="Project 2"></div>
-        <div class="portfolio-item"><img src="images/project 3.png" alt="Project 3"></div>
-        <div class="portfolio-item"><img src="images/project 4.png" alt="Project 4"></div>
-        <div class="portfolio-item"><img src="images/project 5.png" alt="Project 5"></div>
-        <div class="portfolio-item"><img src="images/project 6.png" alt="Project 6"></div>
 
-        <!-- Duplicate the same 6 projects for seamless scroll -->
-        <div class="portfolio-item"><img src="images//project 1.png" alt="Project 1"></div>
-        <div class="portfolio-item"><img src="images/project 2.png" alt="Project 2"></div>
-        <div class="portfolio-item"><img src="images/project 3.png" alt="Project 3"></div>
-        <div class="portfolio-item"><img src="images/project 4.png" alt="Project 4"></div>
-        <div class="portfolio-item"><img src="images/project 5.png" alt="Project 5"></div>
-        <div class="portfolio-item"><img src="images/project 6.png" alt="Project 6"></div>
+<section class="about" id="about">
+  <div class="container about-container">
+
+    <!-- LEFT SIDE: Values + Portfolio -->
+    <div class="about-left">
+
+      <!-- Core Values -->
+      <div class="values">
+        <div class="value-card">
+          <div class="value-header">🌟 Innovation <span class="arrow">▼</span></div>
+          <div class="value-text">
+            We continuously explore new technologies to bring modern solutions to our clients.
+          </div>
+        </div>
+
+        <div class="value-card">
+          <div class="value-header">🤝 Integrity <span class="arrow">▼</span></div>
+          <div class="value-text">
+            We are committed to honesty, transparency, and delivering on our promises.
+          </div>
+        </div>
+
+        <div class="value-card">
+          <div class="value-header">👥 Collaboration <span class="arrow">▼</span></div>
+          <div class="value-text">
+            We believe great results come from teamwork and open communication.
+          </div>
+        </div>
+
+        <div class="value-card">
+          <div class="value-header">🌍 Sustainability <span class="arrow">▼</span></div>
+          <div class="value-text">
+            We aim to build solutions that are eco-friendly and future-ready.
+          </div>
+        </div>
+      </div> <!-- End .values -->
+
+      <!-- Expand Arrow -->
+      <div class="expand-arrow">▼ Show Portfolio</div>
+
+      <!-- Portfolio Area (Hidden by default) -->
+      <div class="portfolio-area">
+        <!-- Filters -->
+        <div class="portfolio-filters">
+          <button data-filter="all" class="active">All</button>
+          <button data-filter="web">Web Apps</button>
+          <button data-filter="mobile">Mobile Apps</button>
+          <button data-filter="ecommerce">E-commerce</button>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="portfolio-grid">
+          <div class="project-card" data-category="web">
+            <img src="images/mern-ecommerce.png" alt="MERN E-commerce App">
+          </div>
+          <div class="project-card" data-category="mobile">
+            <img src="images/banking-mobile.png" alt="Banking Mobile App">
+          </div>
+          <div class="project-card" data-category="ecommerce">
+            <img src="images/shopify-store.png" alt="Shopify Store">
+          </div>
+          <div class="project-card" data-category="web">
+            <img src="images/portfolio-website.png" alt="Portfolio Website">
+          </div>
+          <div class="project-card" data-category="mobile">
+            <img src="images/fitness-tracker.png" alt="Fitness Tracker">
+          </div>
+          <div class="project-card" data-category="ecommerce">
+            <img src="images/custom-checkout.png" alt="Custom Checkout Flow">
+          </div>
+        </div>
+      </div> <!-- End .portfolio-area -->
+
+    </div> <!-- End .about-left -->
+
+    <!-- RIGHT SIDE: About Content -->
+    <div class="about-content">
+      <h2>About Us</h2>
+      <p>
+         We’re a boutique studio founded by makers who believe in quality over quantity. Unlike large agencies that juggle dozens of clients, we focus on one project at a time. This means you get direct access to the people building your product—no account managers, no hidden subcontractors.
+         Web & Mobile Development: Crafting apps that work flawlessly across devices and platforms.
+         Security & Process Excellence: Bringing DevSecOps practices, project management, and lean methodology to every build.
+         We know what it’s like to be let down by unreliable dev partners. As SaaS founders ourselves, we’ve felt the frustration of buggy code, broken stacks, and wasted opportunities. That’s why we built this studio: to give startups the boutique partner we always wished we had.
+      </p>
+
+      <!-- Highlights -->
+      <div class="about-highlights">
+        <div class="highlight">
+          <h3>10+</h3>
+          <p>Years of Experience</p>
+        </div>
+        <div class="highlight">
+          <h3>50+</h3>
+          <p>Projects Completed</p>
+        </div>
+        <div class="highlight">
+          <h3>100%</h3>
+          <p>Client Satisfaction</p>
+        </div>
+      </div>
+    </div> <!-- End .about-content -->
+
+  </div> <!-- End .about-container -->
+</section>
+
+<section class="boutique" id="boutique">
+  <div class="container boutique-container">
+
+    <!-- Header -->
+    <div class="boutique-header">
+      <h2>Boutique Web & Mobile Apps, Built In-House</h2>
+      <p>
+        We’re not a code factory. We’re a boutique studio that takes on one client at a time—delivering 
+        beautiful, high-performing, and secure digital experiences with white-glove attention.
+      </p>
+      <a href="#contact" class="btn-start">✨ Start Your Project</a>
+    </div>
+
+    <!-- Why Choose a Boutique Studio? -->
+    <div class="boutique-why">
+      <h3>Why Choose a Boutique Studio?</h3>
+      <div class="boutique-cards">
+        <div class="card">
+          <h4>Exclusive Focus</h4>
+          <p>We only take on one project at a time. You get our full attention, concierge-style service, and no competing priorities.</p>
+        </div>
+        <div class="card">
+          <h4>In-House Craftsmanship</h4>
+          <p>Everything is designed, built, and secured by us. No outsourcing, no middlemen—just direct collaboration with makers.</p>
+        </div>
+        <div class="card">
+          <h4>Secure by Design</h4>
+          <p>Security isn’t an afterthought—it’s woven naturally into our process so your app is ready to grow, scale, and impress investors.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- What We Do -->
+    <div class="boutique-services">
+      <h3>What We Do</h3>
+      <div class="service-cards">
+        <div class="card">
+          <h4>🌐 Web App Development</h4>
+          <p>Custom web apps designed to scale, tailored to your product vision. Always crafted in-house with meticulous attention to detail.</p>
+        </div>
+        <div class="card">
+          <h4>📱 Mobile App Development</h4>
+          <p>Beautiful, high-performing apps for iOS and Android, built with care and designed for real-world user experience.</p>
+        </div>
+        <div class="card">
+          <h4>⚡ DevSecOps Integration</h4>
+          <p>Automated testing, CI/CD, and secure coding practices—ensuring your launch is fast, reliable, and investor-ready.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Our Process -->
+    <div class="boutique-process">
+      <h3>Our Process</h3>
+      <div class="process-steps">
+        <div class="step">
+          <h4>1. Discovery</h4>
+          <p>We dive deep into your vision and goals to align our work with your product’s future.</p>
+        </div>
+        <div class="step">
+          <h4>2. Craft</h4>
+          <p>In-house development with no shortcuts. We build, test, and refine with you every step of the way.</p>
+        </div>
+        <div class="step">
+          <h4>3. Launch</h4>
+          <p>Your product goes live polished, secure, and ready for growth—with us by your side as partners.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="invest-early" class="invest-section hidden">
-  <div class="container">
-    <h2>💡 Invest Early. Save Big Later.</h2>
-    <p class="intro">
-      Most teams treat security like duct tape — something added at the end. But vulnerabilities caught late can cost 10x more to fix than those found early. 
-      Our shift-left approach integrates DevSecOps into every step of development, reducing risk, accelerating launch, and protecting your brand’s reputation.
-    </p>
-    <div class="stages">
-    <div class="stage"><span class="label">Design</span> <span class="value" data-target="100">$0</span></div>
-    <div class="stage"><span class="label">Development</span> <span class="value" data-target="1000">$0</span></div>
-    <div class="stage"><span class="label">Testing</span> <span class="value" data-target="5000">$0</span></div>
-    <div class="stage"><span class="label">Post-Launch</span> <span class="value" data-target="10000">$0</span></div>
-  </div>
-  
-     <p class="highlight">
-      ➝ Shift-Left Security = Find Bugs Early → Save Money, Launch Faster
-    </p> 
+
+<section class="maintenance" id="maintenance">
+  <div class="container maintenance-container">
+    <div class="maintenance-header">
+      <h2>Continuous Support & Maintenance</h2>
+      <p>Keep your web and mobile apps running smoothly with our proactive maintenance and expert support services.</p>
+    </div>
+
+    <div class="maintenance-cards">
+      <div class="card">
+        <h4>🛠 Bug Fixes & Updates</h4>
+        <p>Rapid issue resolution, security patches, and feature updates to ensure your apps remain stable and secure.</p>
+      </div>
+      <div class="card">
+        <h4>⚡ Performance Optimization</h4>
+        <p>Monitor performance, optimize speed, and enhance user experience across devices and platforms.</p>
+      </div>
+      <div class="card">
+        <h4>🔒 Security Monitoring</h4>
+        <p>Continuous vulnerability assessments, automated backups, and risk mitigation to protect your apps and data.</p>
+      </div>
+      <div class="card">
+        <h4>📈 Analytics & Reporting</h4>
+        <p>Receive actionable insights on user behavior, performance metrics, and recommendations for growth.</p>
+      </div>
+    </div>
+
+    <div class="maintenance-cta">
+      <a href="#contact" class="btn-start">Start Maintenance Plan</a>
+    </div>
   </div>
 </section>
 
-<style>
-.cost-counter {
-  text-align: center;
-}
-.stages {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 1rem;
-}
-.stage {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #e63946;
-}
-.stage .label {
-  display: block;
-  font-size: 1.5rem;   /* increase stage name size */
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #222;
-}
-
-.stage .value {
-  font-size: 2.4rem;   /* increase dollar amount size */
-  font-weight: 800;
-  color: #e63946;
-}
-</style>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const counters = document.querySelectorAll(".value");
-  counters.forEach(counter => {
-    let target = +counter.getAttribute("data-target");
-    let current = 0;
-    let step = target / 900; // speed
-
-    let update = () => {
-      current += step;
-      if (current < target) {
-        counter.textContent = "$" + Math.floor(current);
-        requestAnimationFrame(update);
-      } else {
-        counter.textContent = "$" + target.toLocaleString();
-      }
-    };
-    update();
-  });
-});
-</script>
 
 
 
-
-
-
-
-  <!-- ===== Contact ===== -->
- <section class="contact-section" id="contact">
-  <h2>Contact Us</h2>
-  <form class="contact-form">
+<section class="contact">
+  <div class="contact-container">
     
-    <!-- Name -->
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" required>
-
-    <!-- Email -->
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" required>
-
-    <!-- Service selection -->
-    <label for="service">Service</label>
-    <select id="service" name="service" required>
-      <option value="">-- Please choose an option --</option>
-      <option value="web-app">Web Application</option>
-      <option value="mobile-app">Mobile Application</option>
-      <option value="web-section">Section of a Web App</option>
-      <option value="mobile-section">Section of a Mobile App</option>
-    </select>
-
-    <!-- Project description -->
-    <label for="message">Describe Your Project</label>
-    <textarea id="message" name="message" rows="5" placeholder="Tell us about the project you're looking for..." required></textarea>
-
-    <!-- Submit -->
-    <button type="submit">Send</button>
-  </form>
+    <!-- Left Side: Heading + Laptop -->
+    <div class="contact-text">
+      <h2>Let's Create Your Web/Mobile Application</h2>
+      <p>
+        We help businesses grow by building powerful digital solutions—custom websites, 
+        mobile apps, and scalable platforms.
+      </p>
+      <div class="laptop-image">
+        <img src="images/laptop.png" alt="Laptop showcasing project">
+      </div>
+    </div>
+    
+    <!-- Right Side: Form -->
+    <form class="contact-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com">
+      </div>
+      <div class="form-group">
+        <label for="company">Company</label>
+        <input type="text" id="company" name="company" placeholder="Your Company">
+      </div>
+      <div class="form-group">
+        <label for="budget">Engagement Budget</label>
+        <select id="budget" name="budget">
+          <option>$1 – $24,999</option>
+          <option>$25,000 – $49,999</option>
+          <option>$50,000 – $99,999</option>
+          <option>$100,000+</option>
+        </select>
+      </div>
+      <button type="submit" class="btn-submit">Start a Project</button>
+    </form>
+    
+  </div>
 </section>
 
+<footer class="footer">
+  <div class="footer-container">
 
-  <!-- ===== Footer ===== -->
-  <footer class="footer">
-    <p>&copy; 2025 YourBrand. All rights reserved.</p>
-  </footer>
+    <!-- Logo -->
+    <div class="footer-logo">
+      <h2>House of Code</h2>
+      <p>Building scalable web & mobile solutions.</p>
+    </div>
 
-  <!-- ===== Sticky CTA ===== -->
-  <a href="#contact" class="sticky-cta">Get Started</a>
+    <!-- Navigation -->
+    <div class="footer-nav">
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Docs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+    </div>
 
-  <!-- ===== Exit Popup ===== -->
-  <div class="exit-popup" id="exitPopup">
-    <div class="popup-content">
-      <button class="close-popup" id="closePopup">&times;</button>
-      <h2>Avoid Common Coding Mistakes</h2>
-      <p>Discover why shift-left principles matter and how to reduce costly errors in development.</p>
-      <form class="popup-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <button type="submit">Get the Guide</button>
-      </form>
+    <!-- Contact -->
+    <div class="footer-contact">
+      <p><strong>Contact Us</strong></p>
+      <p>📞 +1-543-123-4567</p>
+      <p>📧 support@houseofcode.com</p>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-social">
+      <a href="#" aria-label="Twitter">Twitter</a>
+      <a href="#" aria-label="Facebook">Facebook</a>
+      <a href="#" aria-label="Instagram">Instagram</a>
     </div>
   </div>
 
-  <!-- ===== Scripts ===== -->
-  <script src="script.js">
-    // Mobile nav toggle
-    const hamburger = document.getElementById('hamburger');
-    const mainNav = document.getElementById('mainNav');
+  <hr>
 
-    hamburger.addEventListener('click', () => {
-      const isOpen = mainNav.classList.toggle('open');
-      hamburger.classList.toggle('active');
-      hamburger.setAttribute('aria-expanded', isOpen);
-      document.body.classList.toggle('menu-open', isOpen);
-    });
+  <p class="footer-bottom">© 2025 House of Code — All Rights Reserved</p>
+</footer>
 
-    // Close nav when link clicked
-    document.querySelectorAll('.main-nav a').forEach(link => {
-      link.addEventListener('click', () => {
-        if (mainNav.classList.contains('open')) {
-          mainNav.classList.remove('open');
-          hamburger.classList.remove('active');
-          hamburger.setAttribute('aria-expanded', false);
-          document.body.classList.remove('menu-open');
-        }
-      });
-    });
 
-    // Shrinking header
-    const header = document.querySelector('.main-header');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        header.classList.add('shrink');
-      } else {
-        header.classList.remove('shrink');
-      }
-    });
 
-    // Exit intent popup
-    const exitPopup = document.getElementById('exitPopup');
-    const closePopup = document.getElementById('closePopup');
-    let popupShown = false;
 
-    document.addEventListener('mouseleave', (e) => {
-      if (e.clientY < 10 && !popupShown) {
-        exitPopup.classList.add('show');
-        popupShown = true;
-      }
-    });
-
-    closePopup.addEventListener('click', () => {
-      exitPopup.classList.remove('show');
-    });
-  </script>
-
+<!-- JS for scroll animations -->
+<script src="script.js"></script>
 </body>
 </html>
 
