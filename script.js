@@ -1,83 +1,117 @@
-const slides = document.querySelector('.slides');
-const dots = document.querySelectorAll('.dot');
-let currentIndex = 0;
+document.addEventListener("DOMContentLoaded", () => {
+  // ===== Services Section Animation =====
+  const servicesSection = document.querySelector(".services");
+  const header = document.querySelector(".services-header h2");
+  const paragraph = document.querySelector(".services-header p");
+  const cards = document.querySelectorAll(".service-cards .card");
+  const fallingElements = document.querySelectorAll(".falling-element");
 
-function showSlide(index) {
-  slides.style.transform = `translateX(-${index * 100}%)`;
-  dots.forEach(dot => dot.classList.remove('active'));
-  dots[index].classList.add('active');
-  currentIndex = index;
-}
+  if (servicesSection) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Animate header and paragraph
+          header.classList.add("visible");
+          setTimeout(() => paragraph.classList.add("visible"), 300);
 
-// Auto slide every 5s
-setInterval(() => {
-  let nextIndex = (currentIndex + 1) % 3;
-  showSlide(nextIndex);
-}, 5000);
+          // Animate cards staggered
+          cards.forEach((card, i) => {
+            setTimeout(() => card.classList.add("visible"), 600 + i * 300);
+          });
 
-// Dot click
-dots.forEach((dot, i) => {
-  dot.addEventListener('click', () => showSlide(i));
-});
+          // Start falling elements animation
+          fallingElements.forEach(el => el.style.animationPlayState = "running");
 
-// Init
-showSlide(0);
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
 
- document.addEventListener("DOMContentLoaded", () => {
-    // select only the sections we want to reveal
-    const sections = document.querySelectorAll(
-      ".services-section, .about-section, .portfolio-section, .contact-section, .invest-section"
-    );
+    observer.observe(servicesSection);
+  }
 
-    const observer = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("in-view");
-            observer.unobserve(entry.target); // animate only once
-          }
-        });
-      },
-      { threshold: 0.2 } // reveal when 20% is visible
-    );
-
-    sections.forEach((section) => {
-      observer.observe(section);
+  // ===== About Section Darken =====
+  const aboutSection = document.querySelector(".about");
+  if (aboutSection) {
+    window.addEventListener("scroll", () => {
+      const rect = aboutSection.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.8) {
+        aboutSection.classList.add("darkened");
+      }
     });
+  }
+
+  // ===== Expandable Value Cards =====
+  document.querySelectorAll(".value-card").forEach(card => {
+    const arrow = card.querySelector(".arrow");
+    const content = card.querySelector(".value-text");
+    if (arrow && content) {
+      arrow.addEventListener("click", () => {
+        content.classList.toggle("active");
+        arrow.classList.toggle("rotated");
+      });
+    }
   });
 
+  // ===== Show/Hide Portfolio =====
+  const expandArrow = document.querySelector(".expand-arrow");
+  const portfolioArea = document.querySelector(".portfolio-area");
+  if (expandArrow && portfolioArea) {
+    expandArrow.addEventListener("click", () => {
+      const isVisible = portfolioArea.style.display === "flex";
+      portfolioArea.style.display = isVisible ? "none" : "flex";
+      expandArrow.textContent = isVisible ? "▼ Show Portfolio" : "▲ Hide Portfolio";
+    });
+  }
 
+  // ===== Portfolio Filters =====
+  const filterButtons = document.querySelectorAll(".portfolio-filters button");
+  const projectCards = document.querySelectorAll(".project-card");
 
-let greenWidths = [50, 150, 250, 350];
-let redWidths   = [300, 220, 150, 80];
+  filterButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      filterButtons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
 
-let greenValues = [100, 500, 1000, 2000];
-let redValues   = [1000, 700, 400, 200];
-
-let i = 0;
-
-setInterval(() => {
-  document.getElementById("greenLineH").style.width = greenWidths[i % greenWidths.length] + "px";
-  document.getElementById("redLineH").style.width = redWidths[i % redWidths.length] + "px";
-
-  document.getElementById("greenAmountH").innerText = "$" + greenValues[i % greenValues.length];
-  document.getElementById("redAmountH").innerText = "$" + redValues[i % redValues.length];
-
-  i++;
-}, 1500);
-
-
-const hamburger = document.getElementById('hamburger');
-const mainNav = document.getElementById('mainNav');
-
-hamburger.addEventListener('click', () => {
-  // Toggle hamburger "X"
-  hamburger.classList.toggle('active');
-  
-  // Toggle nav visibility
-  mainNav.classList.toggle('show');
-
-  // Update aria-expanded for accessibility
-  const expanded = hamburger.classList.contains('active');
-  hamburger.setAttribute('aria-expanded', expanded);
+      const filter = btn.dataset.filter;
+      projectCards.forEach(card => {
+        card.style.display = filter === "all" || card.dataset.category === filter ? "block" : "none";
+      });
+    });
+  });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const servicesSection = document.querySelector(".services");
+  const headerElements = servicesSection.querySelectorAll(".services-header h2, .services-header p");
+  const cards = servicesSection.querySelectorAll(".service-cards .card");
+
+  // Reveal options
+  const revealOptions = { threshold: 0.3 };
+
+  // Reveal header (h2 + p together)
+  const revealHeader = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        headerElements.forEach(el => el.classList.add("reveal"));
+        observer.unobserve(entry.target);
+      }
+    });
+  };
+  const headerObserver = new IntersectionObserver(revealHeader, revealOptions);
+  headerObserver.observe(servicesSection.querySelector(".services-header"));
+
+  // Reveal each card individually
+  const revealCard = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("reveal");
+        observer.unobserve(entry.target); // reveal only once
+      }
+    });
+  };
+  const cardObserver = new IntersectionObserver(revealCard, revealOptions);
+  cards.forEach(card => cardObserver.observe(card));
+});
+
+
